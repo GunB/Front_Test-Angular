@@ -6,6 +6,10 @@
 (function () {
     angular.module('tag.service', ['ngRoute'])
             .service('$tag', ["$http", "$rootScope", "$filter", function ($http, $rootScope, $filter) {
-                    
+                    return {
+                        get_needed_data : function(){
+                            return ["data", "payment-method", "send-data"];
+                        }
+                    };
                 }]);
 })();

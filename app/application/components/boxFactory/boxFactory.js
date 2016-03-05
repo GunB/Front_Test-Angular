@@ -9,7 +9,6 @@
             .factory("$boxFactory", function ($log) {
                 var compile = function (render, jQueryContainer, $compile, $scope) {
                     var compiledeHTML = $compile(render)($scope);
-                    //$("#content_container")
                     jQueryContainer.append(compiledeHTML);
                 };
 

@@ -8,9 +8,10 @@ $blueprint-grid-columns : 24;
 $blueprint-grid-width   : 30px;
 $blueprint-grid-margin  : 10px;
 
-$background-color       : #373737;
+$background-color       : #FFF;
 
-$basic-border           : 10px;
+$basic-border           : 1px;
+$border-color           : rgb(227, 229, 231);
 $font-color             : #333;
 $font-color-link        : #00a1d2;
 $font-color-inverse     : #fff;
@@ -21,15 +22,17 @@ $font-family            : 'Helvetica Neue', Helvetica, Arial, sans-serif;
 //$background-inner       : image-url("inner.jpg");
 //$background-outter      : image-url("outter.jpg");
 
-$header-bg              : #222;
-$menu-width             : 250px!default;
+$header-bg              : rgb(245, 247, 249);
+$icon-list-bg           : black;
 
-$footer-size            : 250px;
+//$menu-width             : 250px!default;
+
+//$footer-size            : 250px;
 
 /********** GRID COMICS *********/
 
 $grid-width             : 400px;
-$padding-default        : 5px;
+$padding-default        : 10px;
 
 
 /********** MIXING ***************/

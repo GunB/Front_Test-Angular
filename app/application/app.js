@@ -8,8 +8,16 @@ angular.module('myApp', [
     'ngRoute',
     //myApp
     'paywizard.route',
-    'paywizard.controller'
+    'paywizard.directive',
+    'paywizard.controller',
     
+    'form.controller',
+    'form.data.directive',
+    'form.paymentMethod.directive',
+    'form.sendData.directive',
+    //App features
+    'box.factory',
+    'tag.service'
 ]).
         config(['$routeProvider', function ($routeProvider) {
                 $routeProvider.otherwise({redirectTo: '/paymentw'});
