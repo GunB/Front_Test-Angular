@@ -7,8 +7,14 @@
 (function () {
     angular.module('form.controller', [])
             .controller('formController',
-                    function ($element, $tag, $boxFactory, $compile, $scope) {
-                        this.listIcon = $scope.listIcon;
-                        //$element.html(this.listIcon);
+                    function ($tag, $scope, $element) {
+                        var type = $element.attr("app-form");
+                        
+                        console.log($tag.get_information(type), type);
+
+                        $.extend(this,
+                                {listIcon: $scope.listIcon},
+                                $tag.get_information(type));
+
                     });
 })();

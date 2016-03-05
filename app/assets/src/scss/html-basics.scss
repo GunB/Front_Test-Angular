@@ -11,3 +11,35 @@ body{
     };
     @include background-size(cover);*/
 }
+
+@media only screen and (max-width : $desktop-width) {
+    body.container-fluid{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+button{
+    background-color: $font-color-link;
+    border: 0px;
+    @include border-radius(20px);
+    color: $font-color-inverse;
+    font-size: $font-size-title;
+    padding: 20px 40px;
+    font-weight: bold;
+}
+
+input[type=text], textarea {
+
+    outline: none;
+    border: 1px solid $outline-color-focus;
+}
+
+input[type=text]:focus, textarea:focus {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    box-shadow: 0 0 5px $outline-color-focus;
+    border: 1px solid $outline-color-focus;
+}

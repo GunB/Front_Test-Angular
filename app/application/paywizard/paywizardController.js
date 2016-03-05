@@ -22,10 +22,11 @@
 
                                 var objReder = {
                                     "list-icon": k + 1,
+                                    "app-form" : v,
                                     class: "payment-form"
                                 };
                                 
-                                objReder["my-app-form-" + v] = v;
+                                objReder["my-app-form-" + v] = "";
 
                                 var render = $("<section>", objReder);
                                 $boxFactory.jQueryCompile(render, $element, $compile, $scope);

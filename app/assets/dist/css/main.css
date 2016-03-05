@@ -55,6 +55,8 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
+/* Define media queries */
+/*******************************/
 /* Define some variables */
 /********** BASICS ************/
 /********** STYLE *************/
@@ -63,7 +65,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /********** BODY **************/
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  color: #979797;
   /*background: {
       image: $background-inner;
       repeat: no-repeat;
@@ -71,6 +73,33 @@ body {
       attachment: fixed;
   };
   @include background-size(cover);*/ }
+
+@media only screen and (max-width: 960px) {
+  body.container-fluid {
+    margin: 0;
+    padding: 0; } }
+button {
+  background-color: #97c30e;
+  border: 0px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 14pt;
+  padding: 20px 40px;
+  font-weight: bold; }
+
+input[type=text], textarea {
+  outline: none;
+  border: 1px solid #97c30e; }
+
+input[type=text]:focus, textarea:focus {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  box-shadow: 0 0 5px #97c30e;
+  border: 1px solid #97c30e; }
 
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -81,22 +110,154 @@ and open the template in the editor.
     Created on : 5/03/2016, 02:57:08 AM
     Author     : Heiner
 */
+section.payment-form a {
+  color: #97c30e; }
+  section.payment-form a:hover {
+    text-decoration: none; }
+  section.payment-form a span {
+    text-decoration: underline; }
 section.payment-form header {
   background: #f5f7f9;
   padding: 10px;
-  border: 1px solid #e3e5e7; }
-  section.payment-form header .list-item {
-    background: black;
-    color: #fff;
-    font-weight: bold;
-    -moz-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    border-radius: 100%;
-    padding: 5px 10px; }
-section.payment-form main {
-  padding: 10px;
   border: 1px solid #e3e5e7;
-  border-width: 0px 1px; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  section.payment-form header h1 {
+    font-size: 14pt;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    color: #000; }
+    section.payment-form header h1 .list-item {
+      background: black;
+      color: #fff;
+      -moz-border-radius: 100%;
+      -webkit-border-radius: 100%;
+      border-radius: 100%;
+      padding: 5px 10px;
+      margin-right: 7px; }
+  @media only screen and (max-width: 960px) {
+    section.payment-form header a {
+      display: none; } }
+section.payment-form main {
+  padding: 15px;
+  border: 1px solid #e3e5e7;
+  border-width: 0px 1px;
+  color: #979797; }
+  section.payment-form main section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center; }
+    section.payment-form main section form {
+      width: 960px;
+      margin: 0 auto; }
+      section.payment-form main section form .example {
+        font-size: 10pt;
+        font-style: italic; }
+      @media only screen and (max-width: 960px) {
+        section.payment-form main section form > div {
+          flex-wrap: wrap; }
+          section.payment-form main section form > div label {
+            width: 100%; }
+          section.payment-form main section form > div > div {
+            width: 100% !important; }
+            section.payment-form main section form > div > div > div {
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -moz-flex;
+              display: -ms-flexbox;
+              display: flex;
+              align-items: center; }
+              section.payment-form main section form > div > div > div span.no-needed-info {
+                display: none; }
+              section.payment-form main section form > div > div > div input.no-needed-info {
+                width: 100% !important; }
+              section.payment-form main section form > div > div > div a {
+                margin-left: 7px; } }
+      section.payment-form main section form > div {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 15px 0px; }
+        section.payment-form main section form > div label {
+          vertical-align: text-top;
+          flex-grow: 1;
+          color: #000;
+          font-weight: bold; }
+        section.payment-form main section form > div > div {
+          width: 80%;
+          display: inline-block; }
+          section.payment-form main section form > div > div input, section.payment-form main section form > div > div textarea {
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            border: 2px solid #e3e5e7;
+            padding: 15px;
+            margin: 7px 0px;
+            display: block;
+            width: 100%; }
+          section.payment-form main section form > div > div > div input {
+            width: 70%;
+            display: inline-block; }
+          section.payment-form main section form > div > div > div .example {
+            font-size: inherit; }
+      section.payment-form main section form button {
+        margin: 0 auto; }
+    @media only screen and (max-width: 960px) {
+      section.payment-form main section.vertical-align {
+        flex-wrap: wrap; }
+        section.payment-form main section.vertical-align figure {
+          width: 100%; } }
+    section.payment-form main section p {
+      margin-bottom: 7px; }
+      section.payment-form main section p:last-child {
+        margin-bottom: 0px; }
+    section.payment-form main section figure {
+      margin: 7px 0px;
+      margin-right: 15px;
+      display: inline-block;
+      flex-grow: 0; }
+  @media only screen and (min-width: 960px) {
+    section.payment-form main .extra-controls {
+      display: none; } }
+  section.payment-form main .extra-controls {
+    text-align: right; }
+  @media only screen and (max-width: 960px) {
+    section.payment-form main h3 {
+      flex-grow: 10; } }
+  section.payment-form main .info {
+    font-style: italic;
+    line-height: 20px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    align-items: center;
+    flex-grow: 10; }
+    section.payment-form main .info i {
+      font-size: 24pt;
+      color: #00afb9; }
+    section.payment-form main .info * {
+      margin-left: 7px; }
+      section.payment-form main .info *:first-child {
+        margin-left: 0px; }
 section.payment-form:last-child main {
   border-bottom-width: 1px; }
 

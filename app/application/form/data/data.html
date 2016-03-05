@@ -1,10 +1,25 @@
 <header>
-    <span class="list-item">{{formCtrl.listIcon}}</span>
-    <h1></h1>
-    <a ng-click="formCtrl.mutate()" ng-show="{{formCtrl.isMutable}}">
-        {{formCtrl.name_mutate}}
+    <h1>
+        <i class="list-item">{{formCtrl.listIcon}}</i>
+        Tus datos
+    </h1>
+    <a ng-click="formCtrl.mutate()" href="#">
+        <i class="fa fa-pencil"></i> <span>Modificar mis datos</span>
     </a>
 </header>
 <main>
-    <img src="assets/images/imagen_corporativa/face.jpg" alt=""/>
+    <section>
+        <figure>
+            <img src="assets/images/imagen_corporativa/face.jpg" alt=""/>
+        </figure>
+        <div>
+            <p>{{formCtrl.user_name}}</p>
+            <p>{{formCtrl.user_email}}</p>
+        </div>
+    </section>
+    <div class="extra-controls">
+        <a ng-click="formCtrl.mutate()" href="#">
+            <i class="fa fa-pencil"></i> <span>Modificar</span>
+        </a>
+    </div>
 </main>

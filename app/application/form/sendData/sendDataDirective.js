@@ -10,7 +10,7 @@
     angular.module('form.sendData.directive', ['ngRoute'])
             .directive("myAppFormSendData", function () {
                 return{
-                    templateUrl: 'application/form/paymentMethod/paymentMethod.html',
+                    templateUrl: 'application/form/sendData/sendData.html',
                     controller: "formController",
                     controllerAs: "formCtrl",
                     restrict: "A",
