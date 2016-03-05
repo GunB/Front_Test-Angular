@@ -1,0 +1,25 @@
+{
+    "name": "angular-seed",
+    "description": "A starter project for AngularJS",
+    "version": "0.0.0",
+    "homepage": "https://github.com/angular/angular-seed",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "angular": "*",
+        "angular-route": "*",
+        "angular-loader": "*",
+        "angular-mocks": "*",
+        "html5-boilerplate": "*",
+        "jquery": "*",
+        "bootstrap": "*",
+        "angular-strap" : "*",
+        "angular-animate": "*"
+    },
+    "install": {
+        "path": {
+            "js": "_js/",
+            "css": "_css/"
+        }
+    }
+}
