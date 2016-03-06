@@ -20,6 +20,7 @@ body{
 }
 
 button{
+    outline: none;
     background-color: $font-color-link;
     border: 0px;
     @include border-radius(20px);
@@ -29,17 +30,20 @@ button{
     font-weight: bold;
 }
 
-input[type=text], textarea {
+input[type=text], input[type=number], textarea {
 
     outline: none;
     border: 1px solid $outline-color-focus;
 }
 
-input[type=text]:focus, textarea:focus {
+input[type=text]:focus,input[type=number]:focus, button:focus, textarea:focus {
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
     box-shadow: 0 0 5px $outline-color-focus;
     border: 1px solid $outline-color-focus;
+}
+a{
+    cursor: pointer;
 }

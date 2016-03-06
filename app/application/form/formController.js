@@ -9,8 +9,27 @@
             .controller('formController',
                     function ($tag, $scope, $element) {
                         var type = $element.attr("app-form");
-                        
-                        console.log($tag.get_information(type), type);
+                        var that = this;
+
+                        this.submitForm = {
+                            submit: function (formName) {
+                                /*if ($scope[formName].$invalid){
+                                 return false;
+                                 }*/
+                                that.finish = $scope[formName].$valid;
+
+                                angular.forEach($scope[formName].$error, function (error) {
+                                    angular.forEach(error, function (field) {
+                                        field.$setTouched();
+                                    });
+                                });
+                                $scope[formName].$setSubmitted();
+                            }
+                        };
+
+                        this.mutate = function () {
+                            that.finish = false;
+                        };
 
                         $.extend(this,
                                 {listIcon: $scope.listIcon},

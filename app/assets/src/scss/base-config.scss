@@ -7,10 +7,6 @@ $desktop-width          : 960px;
 /* Define some variables */
 
 /********** BASICS ************/
-$blueprint-grid-columns : 24;
-$blueprint-grid-width   : 30px;
-$blueprint-grid-margin  : 10px;
-
 $background-color       : #FFF;
 
 $basic-border           : 1px;
@@ -29,8 +25,8 @@ $font-family            : 'Helvetica Neue', Helvetica, Arial, sans-serif;
 //$background-outter      : image-url("outter.jpg");
 
 $header-bg              : rgb(245, 247, 249);
-$border-radius          : 5px;
-$outline-color-focus    : $font-color-link;
+$border-radius          : 10px;
+$outline-color-focus    : $font-color-icons;
 $icon-list-bg           : black;
 
 //$menu-width             : 250px!default;
@@ -44,6 +40,10 @@ $padding-default        : 15px;
 $interlineado           : 7px;
 $padding-title          : 10px;
 
+
+/********** SPECIAL INFO *********/
+
+$color-info             : rgb(230, 250, 251);
 
 /********** MIXING ***************/
 

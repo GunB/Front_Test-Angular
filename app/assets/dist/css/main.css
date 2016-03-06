@@ -61,6 +61,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /********** BASICS ************/
 /********** STYLE *************/
 /********** GRID COMICS *********/
+/********** SPECIAL INFO *********/
 /********** MIXING ***************/
 /********** BODY **************/
 body {
@@ -79,6 +80,7 @@ body {
     margin: 0;
     padding: 0; } }
 button {
+  outline: none;
   background-color: #97c30e;
   border: 0px;
   -moz-border-radius: 20px;
@@ -89,17 +91,20 @@ button {
   padding: 20px 40px;
   font-weight: bold; }
 
-input[type=text], textarea {
+input[type=text], input[type=number], textarea {
   outline: none;
-  border: 1px solid #97c30e; }
+  border: 1px solid #00afb9; }
 
-input[type=text]:focus, textarea:focus {
+input[type=text]:focus, input[type=number]:focus, button:focus, textarea:focus {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
   -ms-transition: all 0.30s ease-in-out;
   -o-transition: all 0.30s ease-in-out;
-  box-shadow: 0 0 5px #97c30e;
-  border: 1px solid #97c30e; }
+  box-shadow: 0 0 5px #00afb9;
+  border: 1px solid #00afb9; }
+
+a {
+  cursor: pointer; }
 
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -204,9 +209,9 @@ section.payment-form main {
           width: 80%;
           display: inline-block; }
           section.payment-form main section form > div > div input, section.payment-form main section form > div > div textarea {
-            -moz-border-radius: 5px;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
             border: 2px solid #e3e5e7;
             padding: 15px;
             margin: 7px 0px;
@@ -241,6 +246,8 @@ section.payment-form main {
   @media only screen and (max-width: 960px) {
     section.payment-form main h3 {
       flex-grow: 10; } }
+  section.payment-form main h3 {
+    font-weight: bold; }
   section.payment-form main .info {
     font-style: italic;
     line-height: 20px;
@@ -258,10 +265,39 @@ section.payment-form main {
       margin-left: 7px; }
       section.payment-form main .info *:first-child {
         margin-left: 0px; }
+    section.payment-form main .info.purchase-ready {
+      margin-top: 15px;
+      background: #e6fafb;
+      padding: 15px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      width: 100%;
+      text-align: center;
+      justify-content: center; }
+      section.payment-form main .info.purchase-ready strong {
+        font-weight: bold; }
+    @media only screen and (max-width: 960px) {
+      section.payment-form main .info.purchase-ready {
+        margin-top: 0px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #00afb9;
+        color: #fff;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        border-radius: 0px; }
+        section.payment-form main .info.purchase-ready i {
+          color: #fff; } }
+@media only screen and (min-width: 960px) {
+  section.payment-form main {
+    padding: 15px 45px; } }
 section.payment-form:last-child main {
   border-bottom-width: 1px; }
 
 input.ng-invalid.ng-touched {
-  background: #FA787E; }
+  background: rgba(255, 0, 0, 0.1); }
 
 /*# sourceMappingURL=main.css.map */

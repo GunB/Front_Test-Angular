@@ -48,12 +48,14 @@ section{
                 }
             }
         }
+
         main{
             padding: $padding-default;
             border: 1px solid $border-color;
             border-width: 0px 1px;
             color: $font-color;
-            section{
+            section{ 
+                
                 form{
                     width: $desktop-width;
                     margin: 0 auto;
@@ -126,7 +128,6 @@ section{
                         margin: 0 auto;
                     }
                 }
-
                 @include flex-block;
                 @media only screen and (max-width : $desktop-width) {
                     &.vertical-align{
@@ -166,6 +167,9 @@ section{
                     flex-grow: 10;
                 }
             }
+            h3{
+                font-weight: bold;
+            }
             .info{
                 font-style: italic;
                 line-height: 20px;
@@ -182,6 +186,43 @@ section{
                         margin-left: 0px;
                     }
                 }
+
+                &.purchase-ready{
+                    margin-top: $padding-default;
+                    background: $color-info;
+                    padding: $padding-default;
+                    @include border-radius($border-radius);
+                    width: 100%;
+                    text-align: center;
+                    justify-content: center;
+
+                    strong{
+                        font-weight: bold;
+                    }
+
+                }
+
+                @media only screen and (max-width : $desktop-width) {
+                    &.purchase-ready{
+                        margin-top: 0px;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        background: $font-color-icons;
+                        color: $font-color-inverse;
+                        @include border-radius(0px);
+                        i{
+                            color: $font-color-inverse;
+                        }
+                    }
+                }
+
+            }
+        }
+        @media only screen and (min-width : $desktop-width) {
+            main{
+                padding: $padding-default 45px;
             }
         }
         &:last-child{
