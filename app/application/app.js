@@ -6,10 +6,19 @@ angular.module('myApp', [
     'ngAnimate', 
     'mgcrea.ngStrap',
     'ngRoute',
-    'myApp.view1',
-    'myApp.view2',
-    'myApp.version'
+    //myApp
+    'paywizard.route',
+    'paywizard.directive',
+    'paywizard.controller',
+    
+    'form.controller',
+    'form.data.directive',
+    'form.paymentMethod.directive',
+    'form.sendData.directive',
+    //App features
+    'box.factory',
+    'tag.service'
 ]).
         config(['$routeProvider', function ($routeProvider) {
-                $routeProvider.otherwise({redirectTo: '/view1'});
+                $routeProvider.otherwise({redirectTo: '/paymentw'});
             }]);

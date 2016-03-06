@@ -1,0 +1,96 @@
+<header>
+    <h1>
+        <i class="list-item">{{formCtrl.listIcon}}</i>
+        Medio de pago
+    </h1>
+    <a ng-click="formCtrl.mutate()"  ng-show="formCtrl.finish">
+        <i class="fa fa-truck"></i> <span>Modificar datos de envío</span>
+    </a>
+</header>
+<main>
+
+    <div class="extra-controls">
+        <a ng-click="formCtrl.mutate()" ng-show="formCtrl.finish">
+            <i class="fa fa-truck"></i> <span>Modificar envío</span>
+        </a>
+    </div>
+
+    <section ng-show="formCtrl.finish">
+
+        <figure>
+            <img src="assets/images/imagen_corporativa/truck.jpg" alt=""/>
+        </figure>
+        <div>
+            <p ng-show="formCtrl.user.direccion">{{formCtrl.user.direccion}} {{formCtrl.user.direccion_opcional}}</p>
+            <p ng-show="formCtrl.user.ciudad">{{formCtrl.user.ciudad}}</p>
+            <p ng-show="formCtrl.user.codigo_postal">Código postal: {{formCtrl.user.codigo_postal}}</p>
+            <p ng-show="formCtrl.user.observaciones">{{formCtrl.user.observaciones}}</p>
+        </div>
+    </section>
+
+    <div class="info purchase-ready" ng-show="formCtrl.finish">
+        <i class="fa fa-info-circle"></i>
+        <p>
+            Dentro de aproximadamente <strong>2 días hábiles</strong>, será entregado tu pedido.
+        </p>
+    </div>
+
+
+    <section ng-hide="formCtrl.finish">
+        <form name="payForm" novalidate ng-submit="formCtrl.submitForm.submit('payForm')" >
+            <div>
+                <label>Dirección de envío *</label>
+                <div>
+                    <input type="text" ng-model="formCtrl.user.direccion" required="">
+                    <span class="example">Ej: Calle 93B No. 17-25</span>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <input type="text" ng-model="formCtrl.user.direccion_opcional" placeholder="Opcional">
+                    <span class="example">Ej: Torre 14 Apartamento 201</span>
+                </div>
+            </div>
+
+            <div>
+                <label>Ciudad *</label>
+                <div>
+                    <div>
+                        <input type="text" class="no-needed-info" ng-model="formCtrl.user.ciudad" required="">
+                        <span class="example no-needed-info">(Colombia)</span>
+                    </div>
+                    <span class="example">Ej: Bogotá</span>
+                </div>
+            </div>
+
+            <div>
+                <label>Código postal</label>
+
+                <div>
+                    <div>
+                        <input type="number" placeholder="Opcional" ng-model="formCtrl.user.codigo_postal">
+                        <a ><span>¿Cómo sé mi código postal?</span></a>
+                    </div>
+                    <span class="example">Ej: 111166</span>
+                </div>
+            </div>
+
+            <div>
+                <label>Observaciones *</label>
+                <div>
+
+                    <input type="text" required="" ng-model="formCtrl.user.observaciones"></textarea>
+
+                    <span class="example">Ej: Dejar en la portería a nombre de Pedro Gómez</span>
+                </div>
+            </div>
+            <div>
+                <button>Continuar <i class="fa fa-long-arrow-right"></i></button>
+            </div>
+
+
+        </form>
+    </section>
+
+</main>

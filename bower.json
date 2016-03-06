@@ -14,7 +14,8 @@
         "jquery": "*",
         "bootstrap": "*",
         "angular-strap" : "*",
-        "angular-animate": "*"
+        "angular-animate": "*",
+        "font-awesome" : "*"
     },
     "install": {
         "path": {
